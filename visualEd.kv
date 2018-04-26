@@ -1,0 +1,186 @@
+#:kivy 1.10.0
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:import SlideTransition kivy.uix.screenmanager.SlideTransition
+
+ScreenManagement:
+    transition: FadeTransition()
+    # transition: SlideTransition(direction="left")
+    MainScreen:
+    Pilha:
+    Fila:
+    Lista:
+    LSE:
+
+<Button>:
+    font_size: 20
+    size_hint: 0.5, 0.05
+
+<MainScreen>:
+    GridLayout:
+
+        cols: 2
+        col_force_default: 0
+        cols_minimum: {0: self.width * .2, 1: self.width * .8}
+        col_default_width: 300
+        spacing: 5
+        height: self.height
+        # width: 400
+
+
+        BoxLayout:
+
+            orientation: 'vertical'
+            spacing: 15
+
+            Label:
+                markup: 1
+                text: '[b]Visual[/b]ED'
+                font_size: 35
+                size_hint: 1, 0.4
+                pos_hint: {'center_x': 0.5, 'y': 50}
+
+            Button:
+                text: 'Pilha'
+                pos_hint: {'center_x': 0.5, 'y': 120}
+
+                on_release: app.root.current = 'pilha'
+
+            Button:
+                text: 'Fila'
+                pos_hint: {'center_x': 0.5, 'y': 90}
+
+                on_release: app.root.current = 'fila'
+
+            Button:
+                text: 'Lista'
+                pos_hint: {'center_x': 0.5, 'y': 60}
+
+            Button:
+                text: 'LSE'
+                pos_hint: {'center_x': 0.5, 'y': 15}
+
+            Widget:
+                size_hint: 1, 0.05
+
+        FloatLayout:
+
+            Label:
+                markup: 1
+                text: 'A Visual\n[b]Data Structures[/b]\nRepresentation'
+                font_size: 40
+                size_hint: 1, 0.4
+                pos_hint: {'center_x': 0.3, 'center_y': 0.5}
+
+<Pilha>:
+    name: 'pilha'
+    GridLayout:
+
+        cols: 2
+        col_force_default: 0
+        cols_minimum: {0: self.width * .2, 1: self.width * .8}
+        col_default_width: 300
+        spacing: 5
+        height: self.height
+        # width: 400
+
+
+        BoxLayout:
+
+            orientation: 'vertical'
+            spacing: 15
+
+            Label:
+                markup: 1
+                text: '[b]Visual[/b]ED'
+                font_size: 35
+                size_hint: 1, 0.4
+                pos_hint: {'center_x': 0.5, 'y': 50}
+
+            Button:
+                text: 'Pilha'
+                pos_hint: {'center_x': 0.5, 'y': 120}
+
+                on_release: app.root.current = 'pilha'
+
+            Button:
+                text: 'Fila'
+                pos_hint: {'center_x': 0.5, 'y': 90}
+
+                on_release: app.root.current = 'fila'
+
+            Button:
+                text: 'Lista'
+                pos_hint: {'center_x': 0.5, 'y': 60}
+
+            Button:
+                text: 'LSE'
+                pos_hint: {'center_x': 0.5, 'y': 15}
+
+            Widget:
+                size_hint: 1, 0.05
+
+        FloatLayout:
+
+            Label:
+                markup: 1
+                text: '[b]Pilha[/b]'
+                font_size: 40
+                size_hint: 1, 0.4
+                pos_hint: {'center_x': 0.3, 'center_y': 0.5}
+
+<Fila>:
+    name: 'fila'
+    GridLayout:
+
+        cols: 2
+        col_force_default: 0
+        cols_minimum: {0: self.width * .2, 1: self.width * .8}
+        col_default_width: 300
+        spacing: 5
+        height: self.height
+        # width: 400
+
+
+        BoxLayout:
+
+            orientation: 'vertical'
+            spacing: 15
+
+            Label:
+                markup: 1
+                text: '[b]Visual[/b]ED'
+                font_size: 35
+                size_hint: 1, 0.4
+                pos_hint: {'center_x': 0.5, 'y': 50}
+
+            Button:
+                text: 'Pilha'
+                pos_hint: {'center_x': 0.5, 'y': 120}
+
+                on_release: app.root.current = 'pilha'
+
+            Button:
+                text: 'Fila'
+                pos_hint: {'center_x': 0.5, 'y': 90}
+
+                on_release: app.root.current = 'fila'
+
+            Button:
+                text: 'Lista'
+                pos_hint: {'center_x': 0.5, 'y': 60}
+
+            Button:
+                text: 'LSE'
+                pos_hint: {'center_x': 0.5, 'y': 15}
+
+            Widget:
+                size_hint: 1, 0.05
+
+        FloatLayout:
+
+            Label:
+                markup: 1
+                text: '[b]Fila[/b]'
+                font_size: 40
+                size_hint: 1, 0.4
+                pos_hint: {'center_x': 0.3, 'center_y': 0.5}
